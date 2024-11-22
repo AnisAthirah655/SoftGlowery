@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soft Glowery Skincare - Moisturizer</title>
+	
+    <!-- Include Google Fonts link for other fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;700&family=Comfortaa:wght@400;500;700&family=Dancing+Script:wght@400;700&family=Qwitcher+Grypen:wght@400;700&family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        /* Import Hangyaboly font */
+        @font-face {
+            font-family: 'Hangyaboly';
+            src: url('fonts/Hangyaboly.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+		
+		/* Import Brightwall font */
+        @font-face {
+            font-family: 'Brightwall';
+            src: url('fonts/Brightwall.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #c5a689;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header and navigation styling */
+        header {
+            background-color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .logo img {
+            width: 198px;
+            max-width: 200px;
+        }
+
+        nav {
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 100px;
+            list-style: none;
+        }
+
+        .nav-links li a {
+            font-family: 'Comfortaa', cursive; /* Using Comfortaa font */
+            text-decoration: none;
+            font-size: 20px;
+            color: #000;
+            text-transform: lowercase;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #d1b294;
+        }
+		
+		/* Apply Hangyaboly font to the title */
+		.title {
+			font-family: 'Hangyaboly', cursive;
+			text-align: center;
+			font-size: 40px;
+		}
+
+        /* Left column styling */
+        .text-content {
+            width: 50%;
+            padding-right: 20px;
+        }
+
+        .text-content h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .text-content p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+		
+		.submit-btn {
+            background-color: #44312b;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 50px;
+            font-size: 1em;
+            font-family: 'Comfortaa', cursive;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            border: none;
+            cursor: pointer;
+        }
+
+        .product {
+            font-family: 'Brightwall', cursive;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        /* Serum Button */
+        .serum-btn {
+            background-color: #333;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .serum-btn:hover {
+            background-color: #555;
+        }
+
+        /* Right column (image) styling */
+        .image-content {
+            width: 45%;
+        }
+
+        .image-content img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+		
+		/* Link Button Styling */
+		.link-btn {
+			display: inline-block;
+			margin-top: px;
+			padding: 8px 20px;
+			background-color: #44312b;
+			color: #ffffff;
+			text-decoration: none;
+			font-size: 1em;
+			border-radius: 50px;
+			text-align: center;
+			font-family: 'Poppins', sans-serif;
+			box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+
+.link-btn:hover {
+    background-color: #5a4335;
+}
+		
+		/* Feedback Section Styling */
+		.feedback-section {
+			background-color: #fff; /* Light beige background */
+			padding: 30px;
+			border: 8px solid #c5a689; /* Outer border similar to the image */
+			margin: 3px auto;
+		}
+
+		.feedback-container {
+			text-align: left;
+			font-family: 'Poppins', sans-serif;
+			color: #44312b;
+		}
+
+		.feedback-container h2 {
+			font-size: 1.8em;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+
+		.name-fields {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.name-fields div {
+			width: 48%; /* Each field takes half the width */
+		}
+
+		label {
+			display: block;
+			font-size: 1em;
+			margin-bottom: 5px;
+		}
+
+		input[type="text"],
+		textarea {
+			width: 100%;
+			padding: 8px;
+			font-size: 1em;
+			border: none;
+			border-bottom: 2px solid #44312b; /* Underline style */
+			background-color: #fff;
+			color: #44312b;
+			font-family: 'Poppins', sans-serif;
+		}
+
+		textarea {
+			resize: none; /* Fixed text area size */
+			height: 30px; /* Adjusted height */
+		}
+		
+		.submit-container {
+			text-align: center;
+			margin-top: 20px;			
+		}
+		
+		/* Footer */
+		footer {
+			background-color: #44312b;
+			color: white;
+			text-align: center;
+			padding: 20px;
+			width: 100%;
+		}
+    </style>
+</head>
+<body>
+	
+<!-- Navigation Bar -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Soft Glowery Skincare Logo">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li class="nav-links"><a href="SoftGlowery.html">home</a></li>
+				<li class="nav-links"><a href="product.html">product</a></li>
+                <li class="nav-links"><a href="about.html">about</a></li>
+            </ul>
+        </nav>
+</header>
+	
+    <div class="title">
+	    <h1>Acne Spot&nbsp;</h1>
+	</div>
+
+<div class="container">
+        <!-- Left column: Text content -->
+      <div class="text-content">
+            <h2>Lion Pair&nbsp;</h2>
+            <p>I used this Lion Pair Acne Spot Treatment because I had persistent breakouts, especially around my chin and forehead. My friend recommended it, and I’ve already gone through three tubes—it works wonders! Whenever a pimple pops up, I apply a small amount, and within a day or two, the redness and swelling are noticeably reduced. My skin feels smoother, and breakouts heal much faster. It’s now my go-to product for clear skin!</p>
+            <p>Skin Type: Suitable for normal to oily skin because it is a gel-like texture</p>
+        <div class="product">What it does:</div> 
+
+            <p>♡ Effective Acne Treatment: The acne cream uses anti-inflammatory agent Ibuprofen Piconol (IPPN) and antibacterial agent Isopropyl Methylphenol (IPMP) to treat troubled skin and reduce acne. <br>
+				♡ Transparent on Application: The cream becomes transparent once applied to pimples, making it discreet and easy to use. <br>
+		  ♡ Refreshing Botanical Fragrance: It has a light, botanical fragrance that adds a pleasant touch to your skincare routine.</p>
+            <div class="product">Key Ingredients:</div> 
+
+          <p>⚝ Ibuprofen Piconol (IPPN) 3.0%: Reduces inflammation, helping to calm redness and swelling associated with acne. <br>
+			  ⚝ Isopropyl Methylphenol (IPMP) 0.3%: Fights acne-causing bacteria, helping to prevent future breakouts. <br>
+			  ⚝ Stearyl Alcohol: Moisturizes and helps stabilize the cream, making it smooth to apply. <br>
+		  ⚝ Polysorbate 60: A surfactant that helps blend the ingredients together for a consistent formula.</p>
+  </div>
+
+        <!-- Right column: Image content -->
+        <div class="image-content">
+          <img src="lionpair.jpg" alt="Product Image">
+			<a href="https://my.shp.ee/cn1hHQD" class="link-btn" target="_blank">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;LINK&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a>
+        </div>
+    </div>
+
+	
+    <!-- Feedback Section -->
+    <section class="feedback-section">
+        <div class="feedback-container">
+            <h2>We'd love to hear from you!!</h2>
+            <div class="name-fields">
+                <div>
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" name="first-name">
+                </div>
+                <div>
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" name="last-name">
+                </div>
+            </div>
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments"></textarea>
+        </div>
+		
+		<div class="submit-container">
+                    <button type="submit" class="submit-btn">Submit</button>
+      </div>
+</section>
+	
+    <!-- Footer -->
+<footer>
+        &copy; 2024 Soft Glowery Skincare. All rights reserved.
+</footer>
+	
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+    // Initialize EmailJS with your User ID
+    (function() {
+        emailjs.init("clM9B9J9PQuImwVRf"); // Double-check this User ID
+    })();
+
+    document.querySelector('.submit-btn').addEventListener('click', function(event) {
+        event.preventDefault();
+
+        var firstName = document.getElementById('first-name').value;
+        var lastName = document.getElementById('last-name').value;
+        var comments = document.getElementById('comments').value;
+
+        // Check if all fields are filled
+        if (!firstName || !lastName || !comments) {
+            alert("Please fill in all fields.");
+            return;
+        }
+
+        // Prepare the email parameters
+        var emailParams = {
+            from_name: `${firstName} ${lastName}`,
+            feedback: comments
+        };
+
+        // Send email using EmailJS
+        emailjs.send("service_gxlmspg", "template_nfwhp1k", emailParams)
+            .then(function(response) {
+                alert("Thank you for your feedback! Your message has been sent.");
+                document.getElementById('first-name').value = '';
+                document.getElementById('last-name').value = '';
+                document.getElementById('comments').value = '';
+            })
+            .catch(function(error) {
+                console.error('Email sending error:', error); // Logs error to the console
+                alert("There was an error sending your feedback. Please try again later.");
+            });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soft Glowery Skincare - Home</title>
+
+    <!-- Include Google Fonts link for Poppins, Cormorant, Comfortaa -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Cormorant:wght@400;700&family=Comfortaa:wght@400;500;700&display=swap" rel="stylesheet">
+	
+	<!-- Include Google Fonts link for other fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;700&family=Comfortaa:wght@400;500;700&family=Dancing+Script:wght@400;700&family=Qwitcher+Grypen:wght@400;700&family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style type="text/css">
+		/* Import Hangyaboly font */
+        @font-face {
+            font-family: 'Hangyaboly';
+            src: url('fonts/Hangyaboly.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        /* Import Brightwall font */
+        @font-face {
+            font-family: 'Brightwall';
+            src: url('fonts/Brightwall.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* General body styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #c5a689;
+            color: #44312b; /* Darker color to contrast background */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Header and navigation styling */
+        header {
+            background-color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .logo img {
+            width: 198px;
+            max-width: 200px;
+        }
+
+        nav {
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 100px;
+            list-style: none;
+        }
+
+        .nav-links li a {
+            font-family: 'Comfortaa', cursive;
+            text-decoration: none;
+            font-size: 20px;
+            color: #000;
+            text-transform: lowercase;
+        }
+
+        /* Main content section */
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 55px;
+        }
+
+        .text-content {
+            width: 100%; 
+            text-align: center; 
+            color: #44312b;
+        }
+
+        .text-content h1 {
+            font-family: 'Cormorant', serif;
+            font-size: 7em; /* Reduced font-size */
+            margin-bottom: 10px; /* Adjusted margin-bottom */
+            text-align: center;
+            margin-top: -30px;
+        }
+
+        .text-content p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.7em;
+            margin-bottom: 10px; /* Reduced margin-bottom */
+        }
+
+        .signup-btn, .submit-btn {
+            background-color: #44312b;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 50px;
+            font-size: 1em;
+            font-family: 'Comfortaa', cursive;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            border: none;
+            cursor: pointer;
+        }
+
+        .social-icons img {
+            width: 30px;
+            margin-right: 15px;
+			border-radius: 10px;
+        }
+
+        /* Image Container with Shadow Image */
+        .image-content {
+            position: relative;
+            max-width: 450px;
+        }
+
+        .image-content img {
+            max-width: 85%;
+        }
+
+        .image-content .shadow-img {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            max-width: 85%;
+            opacity: 1;
+            filter: blur(0px);
+            z-index: 0;
+        }
+
+        .image-content img:first-child {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Importance of Skincare Section */
+        section.important-skin-care {
+            background-color: #fff;
+            padding: 40px;
+            text-align: center;
+            color: #44312b; /* Dark text for contrast on white background */
+        }
+
+        /* Apply Brightwall font to the skincare importance title */
+        section.important-skin-care h2 {
+            font-family: 'Brightwall', cursive;
+            font-size: 3.5em;
+            margin-bottom: 30px;
+        }
+
+        /* Grid layout for benefits */
+        .benefits-grid {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            text-align: center;
+            gap: 30px;
+        }
+
+        .benefit-item {
+            background-color: #b69d81;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 300px;
+            color: #fff; /* White text on dark background */
+        }
+
+        .benefit-item img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .benefit-item h3 {
+            font-family: 'Hangyaboly', cursive;
+            font-size: 2em;
+            margin-top: 15px;
+        }
+
+        .benefit-item p {
+            font-family: 'Hangyaboly', cursive;
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+		
+		/* Feedback Section Styling */
+		.feedback-section {
+			background-color: #fff; /* Light beige background */
+			padding: 30px;
+			border: 8px solid #c5a689; /* Outer border similar to the image */
+			margin: 3px auto;
+		}
+
+		.feedback-container {
+			text-align: left;
+			font-family: 'Poppins', sans-serif;
+			color: #44312b;
+		}
+
+		.feedback-container h2 {
+			font-size: 1.8em;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+
+		.name-fields {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.name-fields div {
+			width: 48%; /* Each field takes half the width */
+		}
+
+		label {
+			display: block;
+			font-size: 1em;
+			margin-bottom: 5px;
+		}
+
+		input[type="text"],
+		textarea {
+			width: 100%;
+			padding: 8px;
+			font-size: 1em;
+			border: none;
+			border-bottom: 2px solid #44312b; /* Underline style */
+			background-color: #fff;
+			color: #44312b;
+			font-family: 'Poppins', sans-serif;
+		}
+
+		textarea {
+			resize: none; /* Fixed text area size */
+			height: 30px; /* Adjusted height */
+		}
+		
+		.submit-container {
+			text-align: center;
+			margin-top: 20px;			
+		}
+
+
+        /* Footer */
+        footer {
+            background-color: #44312b;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Centering the signup button and social icons */
+        .signup-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 0;
+        }
+
+        .signup-btn {
+            margin-right: 15px; /* Space between button and icons */
+        }
+		
+		/* Featured Blogs Section Styling */
+.featured-blogs {
+    background-color: #fff;
+    padding: 40px;
+    text-align: center;
+    color: #44312b;
+}
+
+.featured-blogs h2 {
+    font-family: 'Brightwall', cursive;
+    font-size: 3.5em;
+    margin-bottom: 30px;
+}
+
+.blog-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.blog-item {
+    background-color: #b69d81;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #fff;
+}
+
+.blog-item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.blog-item h3 {
+    font-family: 'Cormorant', serif;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.blog-item p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.blog-item a {
+    font-family: 'Comfortaa', cursive;
+    text-decoration: none;
+    color: #fff;
+    background-color: #44312b;
+    padding: 10px 15px;
+    border-radius: 20px;
+    display: inline-block;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+/* Subscription Section Styling */
+.subscribe {
+    background-color: #c5a689;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px auto;
+    color: #fff;
+    max-width: 600px;
+}
+
+.subscribe h2 {
+    font-family: 'Brightwall', cursive;
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.subscribe p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.subscribe form input[type="email"] {
+    width: 70%;
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 50px;
+    margin-bottom: 10px;
+    font-family: 'Comfortaa', cursive;
+    color: #44312b;
+}
+
+.subscribe form button {
+    background-color: #44312b;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-family: 'Comfortaa', cursive;
+    font-size: 1em;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Reader Poll Section */
+.reader-poll {
+    background-color: #fff;
+    padding: 30px;
+    text-align: center;
+    color: #44312b;
+    border: 3px solid #b69d81;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.reader-poll h2 {
+    font-family: 'Brightwall', cursive;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.reader-poll form label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+.reader-poll form input[type="radio"] {
+    margin-right: 5px;
+}
+
+.reader-poll form button {
+    background-color: #44312b;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-family: 'Comfortaa', cursive;
+    font-size: 1em;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+
+		
+		
+    </style>
+
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Soft Glowery Skincare Logo">
+        </div>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="SoftGlowery.html"><strong>home</strong></a></li>
+                <li><a href="product.html">product</a></li>
+                <li><a href="about.html">about</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Section with Text and Image -->
+    <section class="main-content">
+        <div class="text-content">
+            <h1>SKINCARE WITH ANIS!!!</h1>
+            <p>We are currently making some<br>improvements to our website!</p>
+        </div>
+
+        <!-- Image Container with Shadow Image -->
+        <div class="image-content">
+            <img src="skincare products.jpeg" alt="Skincare Products">
+            <img src="sequre shape.jpeg" alt="Shadow" class="shadow-img">
+		</div>
+    </section>    
+           
+    <!-- Importance of Skincare Section -->
+    <section class="important-skin-care">
+        <h2>Why taking care of your skin is very important?</h2>
+        <div class="benefits-grid">
+            <div class="benefit-item">
+                <img src="product1.jpeg" alt="Prevents Aging">
+                <h3>Prevents Aging</h3>
+                <p>Regular skincare helps reduce wrinkles and fine lines, keeping your skin youthful.</p>
+            </div>
+            <div class="benefit-item">
+                <h3>Boosts Confidence</h3>
+                <p>Clear and healthy skin improves your overall appearance and self-esteem.</p>
+                <img src="product2.jpeg" alt="Boosts Confidence">
+            </div>
+            <div class="benefit-item">
+                <img src="product3.jpeg" alt="Protects from Damage">
+                <h3>Protects from Damage</h3>
+                <p>Proper skincare shields your skin from sun damage, pollution, and harmful bacteria.</p>
+            </div>
+        </div>
+    </section>
+	
+	<section class="featured-blogs">
+    <h2>Featured Articles</h2>
+    <div class="blog-grid">
+        <div class="blog-item">
+            <img src="morning_routine.jpeg" alt="Morning Skincare Routine">
+            <h3>5 Steps to a Perfect Morning Routine</h3>
+            <p>Discover how to start your day with glowing skin.</p>
+            <a href="morning_routine.html">Read More</a>
+        </div>
+        <div class="blog-item">
+            <img src="anti_aging.jpeg" alt="Anti-Aging Tips">
+            <h3>Top Anti-Aging Tips for Your 30s</h3>
+            <p>Learn how to keep your skin youthful and vibrant.</p>
+            <a href="anti_aging.html">Read More</a>
+      </div>
+    </div>
+</section>
+
+
+
+	<section class="reader-poll">
+    <h2>What's Your Biggest Skincare Concern?</h2>
+    <form>
+        <input type="radio" id="aging" name="skincare" value="aging">
+        <label for="aging">Aging</label><br>
+        <input type="radio" id="acne" name="skincare" value="acne">
+        <label for="acne">Acne</label><br>
+        <input type="radio" id="sensitivity" name="skincare" value="sensitivity">
+        <label for="sensitivity">Sensitivity</label><br>
+        <button type="submit">Vote</button>
+    </form>
+</section>
+	
+	<section class="subscribe">
+    <h2>Stay Updated!</h2>
+    <p>Subscribe to our newsletter for weekly skincare tips and tricks.</p>
+    <form id="subscribe-form">
+        <input type="email" id="subscriber-email" placeholder="Enter your email" required>
+        <button type="submit" id="subscribe-button">Subscribe</button>
+    </form>
+</section>
+
+<script>
+    // Add event listener for the subscription form
+    document.getElementById('subscribe-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        var email = document.getElementById('subscriber-email').value;
+        var errorMessage = document.getElementById('error-message'); // Optional: to show error messages
+
+        // Validate the email input
+        if (!email || !email.includes('@')) {
+            alert("Please enter a valid email address.");
+            return;
+        }
+
+        // Check if the email is already stored in localStorage
+        var storedEmail = localStorage.getItem(email);
+
+        if (storedEmail) {
+            // If email is already subscribed, alert the user
+            alert("You are already subscribed!");
+        } else {
+            // Store the email in localStorage
+            localStorage.setItem(email, JSON.stringify({ email: email }));
+
+            // Proceed with the subscription (could be sending it to a backend or EmailJS)
+            var subscriptionParams = {
+                subscriber_email: email
+            };
+
+            // Send subscription email using EmailJS or backend service
+            emailjs.send("service_gxlmspg", "template_subscription", subscriptionParams)
+                .then(function(response) {
+                    alert("Thank you for subscribing! We'll keep you updated.");
+                    document.getElementById('subscriber-email').value = ''; // Clear input
+                })
+                .catch(function(error) {
+                    console.error('Subscription error:', error);
+                    alert("There was an issue with your subscription. Please try again.");
+                });
+        }
+    });
+</script>
+
+
+
+	
+	
+	<!-- Feedback Section -->
+    <section class="feedback-section">
+        <div class="feedback-container">
+            <h2>We'd love to hear from you!!</h2>
+            <div class="name-fields">
+                <div>
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" name="first-name">
+                </div>
+                <div>
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" name="last-name">
+                </div>
+            </div>
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments"></textarea>
+        </div>
+		
+		<div class="submit-container">
+                    <button type="submit" class="submit-btn">Submit</button>
+                </div>
+    </section>
+	
+	<!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Soft Glowery. All Rights Reserved.</p>
+    </footer>
+	
+	
+    
+   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+    // Initialize EmailJS with your User ID
+    (function() {
+        emailjs.init("clM9B9J9PQuImwVRf"); // Double-check this User ID
+    })();
+
+    document.querySelector('.submit-btn').addEventListener('click', function(event) {
+        event.preventDefault();
+
+        var firstName = document.getElementById('first-name').value;
+        var lastName = document.getElementById('last-name').value;
+        var comments = document.getElementById('comments').value;
+
+        // Check if all fields are filled
+        if (!firstName || !lastName || !comments) {
+            alert("Please fill in all fields.");
+            return;
+        }
+
+        // Prepare the email parameters
+        var emailParams = {
+            from_name: `${firstName} ${lastName}`,
+            feedback: comments
+        };
+
+        // Send email using EmailJS
+        emailjs.send("service_gxlmspg", "template_nfwhp1k", emailParams)
+            .then(function(response) {
+                alert("Thank you for your feedback! Your message has been sent.");
+                document.getElementById('first-name').value = '';
+                document.getElementById('last-name').value = '';
+                document.getElementById('comments').value = '';
+            })
+            .catch(function(error) {
+                console.error('Email sending error:', error); // Logs error to the console
+                alert("There was an error sending your feedback. Please try again later.");
+            });
+    });
+</script>
+	
+	<script>
+    document.querySelector('.reader-poll form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const selectedOption = document.querySelector('input[name="skincare"]:checked');
+
+        if (!selectedOption) {
+            alert("Please select an option before submitting.");
+            return;
+        }
+
+        const selectedValue = selectedOption.value;
+
+        const pollParams = {
+            from_name: "Website Visitor",
+            poll_feedback: `Vote: ${selectedValue}`
+        };
+
+        emailjs.send("service_gxlmspg", "template_mc8jou9", pollParams)
+            .then(function(response) {
+                alert("Thank you for voting! Your response has been recorded.");
+                document.querySelector('.reader-poll form').reset();
+            })
+            .catch(function(error) {
+                console.error('Poll submission error:', error);
+                alert("There was an error submitting your vote. Please try again later.");
+            });
+    });
+</script>
+</body>
+</html>

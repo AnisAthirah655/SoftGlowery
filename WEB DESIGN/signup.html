@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soft Glowery Sign Up</title>
+
+    <!-- Include Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Cormorant:wght@400;700&family=Comfortaa:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <style type="text/css">
+        /* General body styling */
+		@font-face {
+            font-family: 'Hangyaboly';
+            src: url('fonts/Hangyaboly.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+		
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #c5a689;
+            color: #44312b; /* Darker color to contrast background */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Header and navigation styling */
+        header {
+            background-color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .logo img {
+            width: 198px;
+            max-width: 200px;
+        }
+
+        nav {
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 100px;
+            list-style: none;
+        }
+
+        .nav-links li a {
+            font-family: 'Comfortaa', cursive;
+            text-decoration: none;
+            font-size: 20px;
+            color: #000;
+            text-transform: lowercase;
+        }
+
+        /* Form Box Styling */
+        .form-box {
+			font-family: 'Hangyaboly', cursive;
+			font-size: 1.5em;
+            background-color: #6D4E43;
+            color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px; /* Max width for the form */
+            margin-top: 50px;
+        }
+
+        h2 {
+            color: #fff; /* White text for heading */
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        input {
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 15px;
+            width: 100%;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"] {
+            background-color: #E0E0E0; /* Light Grey */
+            color: #000; /* Black text for input */
+        }
+
+        button {
+            background-color: #44312b; /* Muted Rose */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #44312a; /* Slightly lighter on hover */
+        }
+
+        .signin-option {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .signin-option a {
+            color: #b69d81; /* Muted Rose */
+            text-decoration: none;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #44312b;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="logo">
+      <a href="SoftGlowerySignUp.html"><img src="logo.png"" alt="SoftGlowery Logo"></a> <!-- Wrap the logo with a link --!>
+			
+    </div>
+
+    <!-- Navigation in the center -->
+    <nav>
+        <ul class="nav-links">
+            <li><a href="SoftGlowerySignUp.html"><strong>Home</strong></a></li>
+            <li><a href="SoftGlowerySignUp.html">Product</a></li>
+            <li><a href="SoftGlowerySignUp.html">About</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Centered container -->
+<div class="container" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+    <div class="form-box">
+        <h2>Create a SoftGlowery Account</h2>
+        <form id="signUpForm">
+            <input type="text" id="signUpName" placeholder="Name" required>
+            <input type="email" id="signUpEmail" placeholder="Email" required>
+            <input type="password" id="signUpPassword" placeholder="Password" required>
+            <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        <div id="emailError" style="color: red; display: none;">An account with this email already exists.</div>
+        <div class="signin-option">
+            <p>Already have an account? <a href="signinn.html">Sign In</a></p>
+        </div>
+    </div>
+</div>
+
+<!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Soft Glowery. All Rights Reserved.</p>
+    </footer>
+
+<script>
+    document.getElementById('signUpForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        var name = document.getElementById('signUpName').value;
+        var email = document.getElementById('signUpEmail').value;
+        var password = document.getElementById('signUpPassword').value;
+        var confirmPassword = document.getElementById('confirmPassword').value;
+        var emailError = document.getElementById('emailError');
+        
+        // Check if the email already exists in localStorage
+        if (localStorage.getItem(email)) {
+            emailError.style.display = 'block'; // Show error if email exists
+        } else if (password === confirmPassword) {
+            // Save the new account in localStorage
+            var newUser = {
+                name: name,
+                email: email,
+                password: password
+            };
+            localStorage.setItem(email, JSON.stringify(newUser));
+            
+            // Auto sign-in after successful sign up
+            alert('Account created successfully! Redirecting to sign in...');
+            window.location.href = 'SignInn.html';
+        } else {
+            alert('Passwords do not match!');
+        }
+    });
+</script>
+
+</body>
+</html>

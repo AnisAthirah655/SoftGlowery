@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soft Glowery Skincare - About</title>
+	
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;700&family=Comfortaa:wght@400;500;700&family=Dancing+Script:wght@400;700&family=Qwitcher+Grypen:wght@400;700&display=swap" rel="stylesheet">
+	
+	<!-- Include Google Fonts link for other fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;700&family=Comfortaa:wght@400;500;700&family=Dancing+Script:wght@400;700&family=Qwitcher+Grypen:wght@400;700&family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+    <style  type="text/css">
+		
+		/* Import Brightwall font */
+        @font-face {
+            font-family: 'Brightwall';
+            src: url('fonts/Brightwall.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #c5a689;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .logo {
+            text-align: center;
+        }
+
+        .logo img {
+            max-width: 200px;
+        }
+
+        nav {
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 100px;
+            list-style: none;
+        }
+
+        .nav-links li a {
+            font-family: 'Comfortaa', cursive;
+            text-decoration: none;
+            font-size: 20px;
+            color: #000;
+            text-transform: lowercase;
+        }
+
+        section {
+            padding: 50px;
+            text-align: center;
+        }
+
+        section h1 {
+            font-family: 'Brightwall', cursive;
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            font-family: 'Hangyaboly', cursive;
+            font-size: 1.3em;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .mission, .values, .team, .history, .testimonials {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .mission h2, .values h2, .team h2, .history h2, .testimonials h2 {
+            font-family: 'Brightwall', cursive;
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        .testimonial {
+            font-style: italic;
+			align-items: center
+            margin: 10px 0;
+        }
+		
+		/* Feedback Section Styling */
+		.feedback-section {
+			background-color: #fff; /* Light beige background */
+			padding: 30px;
+			border: 8px solid #c5a689; /* Outer border similar to the image */
+			margin: 3px auto;
+		}
+
+		.feedback-container {
+			text-align: left;
+			font-family: 'Poppins', sans-serif;
+			color: #44312b;
+		}
+
+		.feedback-container h2 {
+			font-size: 1.8em;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+
+		.name-fields {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.name-fields div {
+			width: 48%; /* Each field takes half the width */
+		}
+
+		label {
+			display: block;
+			font-size: 1em;
+			margin-bottom: 5px;
+		}
+
+		input[type="text"],
+		textarea {
+			width: 100%;
+			padding: 8px;
+			font-size: 1em;
+			border: none;
+			border-bottom: 2px solid #44312b; /* Underline style */
+			background-color: #fff;
+			color: #44312b;
+			font-family: 'Poppins', sans-serif;
+		}
+
+		textarea {
+			resize: none; /* Fixed text area size */
+			height: 30px; /* Adjusted height */
+		}
+		
+		.submit-btn {
+            background-color: #44312b;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 50px;
+            font-size: 1em;
+            font-family: 'Comfortaa', cursive;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            border: none;
+            cursor: pointer;
+        }
+		
+		.submit-container {
+			text-align: center;
+			margin-top: 20px;			
+		}
+
+        footer {
+            background-color: #44312b;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+        }
+
+        .cta {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 40px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta h2 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .cta a {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .cta a:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Soft Glowery Skincare Logo" width="198">
+        </div>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="SoftGlowery.html">home</a></li>
+                <li><a href="product.html">product</a></li>
+                <li><a href="about.html"><strong>about</strong></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section>
+        <div class="mission">
+            <h2>About SoftGlowery Skincare</h2>
+            <p>
+          Welcome to my little corner of the internet! I’m here to share honest, real-life reviews of skincare products that I’ve personally tried, tested, and loved (or not so loved!). My goal is to help you make informed choices in the vast world of skincare, whether you’re new to building a routine or simply looking for a product that <strong>actually</strong> works. From moisturizer to sunscreens, I dive into the details—ingredients, effectiveness, and everything in between—so you can find what suits your unique skin best. Thank you for joining me on this journey to healthier, happier skin! </p>
+        </div>
+
+        <div class="values">
+            <h2>Our Values</h2>
+            <p>
+              We’re dedicated to honest, straightforward reviews based on real experiences, helping you make informed choices that suit your unique skin needs. Our focus is on long-term skin health over quick beauty fixes, and we believe skincare should be inclusive and accessible for everyone, regardless of skin type or budget. As skincare evolves, we stay updated to bring you the latest insights, so you can feel confident in your journey to healthier, happier skin. Thank you for letting us be part of your skincare story!
+          </p>
+        </div>
+
+        <div class="testimonials">
+            <h2>What Our Customers Say</h2>
+            <p class="testimonial">"Soft Glowery transformed my skin! I finally found products that work for me." - Kaisarah.</p>
+            <p class="testimonial">"I love the commitment to clean beauty. It feels good to use products I can trust." - Amna.</p>
+            <p class="testimonial">"The website is so helpful and knowledgeable. I felt supported every step of the way!" - Kayla.</p>
+        </div>
+
+        
+    </section>
+	
+	<!-- Feedback Section -->
+    <section class="feedback-section">
+        <div class="feedback-container">
+            <h2>We'd love to hear from you!!</h2>
+            <div class="name-fields">
+                <div>
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" name="first-name">
+                </div>
+                <div>
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" name="last-name">
+                </div>
+            </div>
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments"></textarea>
+        </div>
+		<div class="submit-container">
+                    <button type="submit" class="submit-btn">Submit</button>
+                </div>
+    </section>
+	
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Soft Glowery. All Rights Reserved.</p>
+    </footer>
+	
+	<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+    // Initialize EmailJS with your User ID
+    (function() {
+        emailjs.init("clM9B9J9PQuImwVRf"); // Double-check this User ID
+    })();
+
+    document.querySelector('.submit-btn').addEventListener('click', function(event) {
+        event.preventDefault();
+
+        var firstName = document.getElementById('first-name').value;
+        var lastName = document.getElementById('last-name').value;
+        var comments = document.getElementById('comments').value;
+
+        // Check if all fields are filled
+        if (!firstName || !lastName || !comments) {
+            alert("Please fill in all fields.");
+            return;
+        }
+
+        // Prepare the email parameters
+        var emailParams = {
+            from_name: `${firstName} ${lastName}`,
+            feedback: comments
+        };
+
+        // Send email using EmailJS
+        emailjs.send("service_gxlmspg", "template_nfwhp1k", emailParams)
+            .then(function(response) {
+                alert("Thank you for your feedback! Your message has been sent.");
+                document.getElementById('first-name').value = '';
+                document.getElementById('last-name').value = '';
+                document.getElementById('comments').value = '';
+            })
+            .catch(function(error) {
+                console.error('Email sending error:', error); // Logs error to the console
+                alert("There was an error sending your feedback. Please try again later.");
+            });
+    });
+</script>
+
+</body>
+</html>

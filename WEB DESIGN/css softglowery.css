@@ -1,0 +1,142 @@
+/* General body styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #c5a689;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header and navigation styling */
+header {
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.logo {
+    text-align: left;
+}
+
+.logo img {
+    width: 198px;
+    max-width: 200px;
+}
+
+nav {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links li a {
+    font-family: Cambria, Hoefler Text, Liberation Serif, Times, Times New Roman, serif;
+    text-decoration: none;
+    font-size: 20px;
+    color: #000;
+    text-transform: lowercase;
+}
+
+/* Main content section */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+.text-content {
+    max-width: 50%;
+    color: #44312b;
+}
+
+.text-content h1 {
+    font-family: 'Sunshiney', cursive;
+    font-size: 6em;
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.signup-btn {
+    background-color: #44312b;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.social-icons img {
+    width: 30px;
+    margin-right: 15px;
+}
+
+/* Image content styling */
+.image-content {
+    position: relative;
+    max-width: 450px;
+}
+
+.image-content img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.image-content .shadow-img {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    max-width: 100%;
+    opacity: 1;
+    filter: blur(0px);
+}
+
+/* Section for importance of skincare */
+section.important-skin-care {
+    background-color: #c5a689;
+    padding: 40px;
+    text-align: center;
+}
+
+section.important-skin-care h2 {
+    font-family: 'Bonbon', cursive;
+    font-size: 2.5em;
+    color: #44312b;
+    margin-bottom: 20px;
+}
+
+.important-skin-care .image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.important-skin-care img {
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for images */
+img:hover {
+    transform: scale(1.05);
+}
+
+

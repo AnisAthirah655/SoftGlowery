@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soft Glowery Skincare - Moisturizer</title>
+	
+    <!-- Include Google Fonts link for other fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;700&family=Comfortaa:wght@400;500;700&family=Dancing+Script:wght@400;700&family=Qwitcher+Grypen:wght@400;700&family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        /* Import Hangyaboly font */
+        @font-face {
+            font-family: 'Hangyaboly';
+            src: url('fonts/Hangyaboly.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+		
+		/* Import Brightwall font */
+        @font-face {
+            font-family: 'Brightwall';
+            src: url('fonts/Brightwall.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #c5a689;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header and navigation styling */
+        header {
+            background-color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .logo img {
+            width: 198px;
+            max-width: 200px;
+        }
+
+        nav {
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 100px;
+            list-style: none;
+        }
+
+        .nav-links li a {
+            font-family: 'Comfortaa', cursive; /* Using Comfortaa font */
+            text-decoration: none;
+            font-size: 20px;
+            color: #000;
+            text-transform: lowercase;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #d1b294;
+        }
+		
+		/* Apply Hangyaboly font to the title */
+		.title {
+			font-family: 'Hangyaboly', cursive;
+			text-align: center;
+			font-size: 40px;
+		}
+
+        /* Left column styling */
+        .text-content {
+            width: 50%;
+            padding-right: 20px;
+        }
+
+        .text-content h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .text-content p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+		
+		.submit-btn {
+            background-color: #44312b;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 50px;
+            font-size: 1em;
+            font-family: 'Comfortaa', cursive;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            border: none;
+            cursor: pointer;
+        }
+
+        .product {
+            font-family: 'Brightwall', cursive;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        /* Serum Button */
+        .serum-btn {
+            background-color: #333;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .serum-btn:hover {
+            background-color: #555;
+        }
+
+        /* Right column (image) styling */
+        .image-content {
+            width: 45%;
+        }
+
+        .image-content img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+		
+		/* Feedback Section Styling */
+		.feedback-section {
+			background-color: #fff; /* Light beige background */
+			padding: 30px;
+			border: 8px solid #c5a689; /* Outer border similar to the image */
+			margin: 3px auto;
+		}
+
+		.feedback-container {
+			text-align: left;
+			font-family: 'Poppins', sans-serif;
+			color: #44312b;
+		}
+
+		.feedback-container h2 {
+			font-size: 1.8em;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+
+		.name-fields {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.name-fields div {
+			width: 48%; /* Each field takes half the width */
+		}
+
+		label {
+			display: block;
+			font-size: 1em;
+			margin-bottom: 5px;
+		}
+
+		input[type="text"],
+		textarea {
+			width: 100%;
+			padding: 8px;
+			font-size: 1em;
+			border: none;
+			border-bottom: 2px solid #44312b; /* Underline style */
+			background-color: #fff;
+			color: #44312b;
+			font-family: 'Poppins', sans-serif;
+		}
+
+		textarea {
+			resize: none; /* Fixed text area size */
+			height: 30px; /* Adjusted height */
+		}
+		
+		/* Link Button Styling */
+		.link-btn {
+			display: inline-block;
+			margin-top: px;
+			padding: 8px 20px;
+			background-color: #44312b;
+			color: #ffffff;
+			text-decoration: none;
+			font-size: 1em;
+			border-radius: 50px;
+			text-align: center;
+			font-family: 'Poppins', sans-serif;
+			box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+
+.link-btn:hover {
+    background-color: #5a4335;
+}
+
+		
+		.submit-container {
+			text-align: center;
+			margin-top: 20px;			
+		}
+		
+		/* Footer */
+		footer {
+			background-color: #44312b;
+			color: white;
+			text-align: center;
+			padding: 20px;
+			width: 100%;
+		}
+    </style>
+</head>
+<body>
+	
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Soft Glowery Skincare Logo">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li class="nav-links"><a href="SoftGlowery.html">home</a></li>
+				<li class="nav-links"><a href="product.html">product</a></li>
+                <li class="nav-links"><a href="about.html">about</a></li>
+            </ul>
+        </nav>
+    </header>
+	
+    <div class="title">
+	    <h1>Moisturizer</h1>
+	</div>
+
+    <div class="container">
+        <!-- Left column: Text content -->
+        <div class="text-content">
+            <h2>The Originote</h2>
+            <p>I have used this moisturizer for about 4 months; personally, I really like the texture and the feeling after using it. However, it did not really make a change for my skin. Not all people will have the same result, though. So, if you are interested, you can proceed to buy it.</p>
+            <p>Skin Type: Suitable for normal to oily skin because it is a gel-like texture</p>
+            <div class="product">What it does:</div> 
+
+            <p>♡ Protects and improves skin barrier<br>
+               ♡ Locks skin hydration<br>
+               ♡ Smoothes and reduces redness on skin<br>
+               ♡ Maintains skin elasticity<br>
+               ♡ Acts as an antioxidant for skin<br>
+               ♡ Controls oil for skin</p>
+            <div class="product">Key Ingredients:</div> 
+
+            <p>⚝ Anti-acne: Phellodendron Amurense Bark Extract<br>
+              ⚝ Skin-identical ingredients: Glycerin, Diglycerin, Sodium Hyaluronate, Cholesterol, Ceramide NP<br>
+               ⚝ Soothing: Panthenol, Allantoin, Phellodendron Amurense Bark Amurense.</p>
+        </div>
+
+        <!-- Right column: Image content -->
+        <div class="image-content">
+    <img src="the originote m.webp" alt="Product Image">
+    <a href="https://vt.tiktok.com/ZSjfTBaA6/" class="link-btn" target="_blank">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;LINK&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a>
+</div>
+		
+		
+    </div>
+	
+    <div class="container">
+        <!-- Left column: Image content (Originote product) -->
+        <div class="image-content">
+		<img src="the raw m.jpg" alt="Product Image">
+		<a href="https://vt.tiktok.com/ZSjf3j9DJ/" class="link-btn" target="_blank"> &nbsp; &nbsp; &nbsp; &nbsp;LINK&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a>
+	</div>
+
+        <!-- Right column: Text content -->
+        <div class="text-content">
+            <h2>The Raw</h2>
+            <p>I have used this moisturizer after my skin broke out badly. I’ve been using it for almost a year now. This moisturizer really helps heal my skin and keeps it hydrated all day. For now, this is the best one I have ever used, and I haven't changed since then.</p>
+            <p>Skin Type: Suitable for normal to dry skin.</p>
+            <div class="product">What it does:</div> 
+
+            <p>♡ Protects and improves the skin barrier<br>
+               ♡ Provides intense hydration and moisture<br>
+               ♡ Delivers long-lasting hydration<br>
+               ♡ Smooths and softens skin with a lightweight, non-greasy formula<br>
+               ♡ Enhances skin elasticity and overall texture <br>
+			   ♡ Ensures a flawless, smooth application, leaving the skin soft and supple</p>
+    
+            <div class="product">Key Ingredients:</div> 
+
+            <p> ⚝ Moisturizing factors: NMFs, Squalane, Jojoba Oil<br>
+                ⚝ Hydration boosters: Multiple types of Hyaluronic Acid<br>
+                ⚝ Barrier repair: 7 types of Ceramides, Cholesterol, Essential Fatty Acids<br>
+                ⚝ Triple Action System combining humectants, emollients, and occlusives for optimal hydration</p>
+        </div>
+    </div>
+	
+<div class="container">
+        <!-- Left column: Text content -->
+        <div class="text-content">
+            <h2>Skintific</h2>
+            <p>I use this moisturizer for about 2 month , I use this because my skin barrier got damage I have quite a lot of tiny bump at that time. So, l try this moisturiser, unfortunetly it didn’t really suit my skin.</p>
+            <p>Skin Type: Suitable for all skin type</p>
+            <div class="product">What it does:</div> 
+
+            <p>♡ 5X Ceramides
+Restore skin natural protective barrier that prevent any moisture loss on the skin<br>
+
+♡ Hyaluronic Acid
+Hydrates the skin instantly and repair skin cells from the inside and outside<br>
+
+♡ Centella Asiatica
+Calms and treats the inflamed skin<br>
+
+♡ Marine Collagen
+Soften skin texture, keeping skin elasticity while preventing premature aging like fine lines and wrinkles</p>
+          <div class="product">Key Ingredients:</div> 
+
+            <p>⚝ Anti-acne: Phellodendron Amurense Bark Extract<br>
+                ⚝ Skin-identical ingredients: Glycerin, Diglycerin, Sodium Hyaluronate, Cholesterol, Ceramide NP<br>
+                ⚝ Soothing: Panthenol, Allantoin, Phellodendron Amurense Bark Amurense.</p>
+        </div>
+
+        <!-- Right column: Image content -->
+        <div class="image-content">
+    <img src="skintific m.webp" alt="Product Image">
+    <a href="https://vt.tiktok.com/ZSjf3JQHn/" class="link-btn" target="_blank">&nbsp; &nbsp; &nbsp; &nbsp;LINK&nbsp; &nbsp; &nbsp; &nbsp;</a>
+</div>
+    </div>
+	
+    <!-- Feedback Section -->
+    <section class="feedback-section">
+        <div class="feedback-container">
+            <h2>We'd love to hear from you!!</h2>
+            <div class="name-fields">
+                <div>
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" name="first-name">
+                </div>
+                <div>
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" name="last-name">
+                </div>
+            </div>
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments"></textarea>
+        </div>
+		
+		<div class="submit-container">
+                    <button type="submit" class="submit-btn">Submit</button>
+                </div>
+    </section>
+	
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Soft Glowery Skincare. All rights reserved.
+    </footer>
+	
+	   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+    // Initialize EmailJS with your User ID
+    (function() {
+        emailjs.init("clM9B9J9PQuImwVRf"); // Double-check this User ID
+    })();
+
+    document.querySelector('.submit-btn').addEventListener('click', function(event) {
+        event.preventDefault();
+
+        var firstName = document.getElementById('first-name').value;
+        var lastName = document.getElementById('last-name').value;
+        var comments = document.getElementById('comments').value;
+
+        // Check if all fields are filled
+        if (!firstName || !lastName || !comments) {
+            alert("Please fill in all fields.");
+            return;
+        }
+
+        // Prepare the email parameters
+        var emailParams = {
+            from_name: `${firstName} ${lastName}`,
+            feedback: comments
+        };
+
+        // Send email using EmailJS
+        emailjs.send("service_gxlmspg", "template_nfwhp1k", emailParams)
+            .then(function(response) {
+                alert("Thank you for your feedback! Your message has been sent.");
+                document.getElementById('first-name').value = '';
+                document.getElementById('last-name').value = '';
+                document.getElementById('comments').value = '';
+            })
+            .catch(function(error) {
+                console.error('Email sending error:', error); // Logs error to the console
+                alert("There was an error sending your feedback. Please try again later.");
+            });
+    });
+</script>
+</body>
+</html>
